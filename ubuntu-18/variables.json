@@ -1,0 +1,13 @@
+{
+    "vcenter_server":"",
+    "username":"",
+    "password":"",
+    "datastore":"",
+    "folder": "",
+    "host":"",
+    "cluster": "",
+    "network": "VM Network",
+    "ssh_username": "",
+    "ssh_password": "",
+    "vm_template_name": "ubuntu18_rancher_template"
+}
