@@ -61,6 +61,11 @@
   
     "provisioners": [
       {
+       "type": "file",
+       "source": "./linux/ubuntu/sources.list",
+       "destination": "/tmp/sources.list"
+      },
+      {
 	"type": "shell",
 	"execute_command": "echo 'vagrant' | sudo -S -E sh {{.Path}}",
 	"scripts": [
