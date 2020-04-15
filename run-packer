@@ -1,0 +1,2 @@
+cd ubuntu-18
+packer build -var-file variables.json ubuntu-18.json
