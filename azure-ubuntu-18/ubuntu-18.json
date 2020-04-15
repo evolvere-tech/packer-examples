@@ -1,0 +1,37 @@
+{
+    "builders": [
+      {
+        "type": "azure-arm",
+ 	"managed_image_resource_group_name": "{{user `resource_group`}}",
+        "subscription_id": "{{user `subscription_id`}}",
+        "managed_image_name": "evolvere-rancher-test",
+        
+
+        "os_type": "Linux",
+        "image_publisher": "Canonical",
+        "image_offer": "UbuntuServer",
+        "image_sku": "18.04-LTS",
+  
+        "location": "UK South",
+        "vm_size": "Standard_DS2_v2"
+  
+      }
+    ],
+  
+    "provisioners": [
+      {
+       "type": "file",
+       "source": "./linux/ubuntu/sources.list",
+       "destination": "/tmp/sources.list"
+      },
+      {
+	"type": "shell",
+	"execute_command": "echo 'vagrant' | sudo -S -E sh {{.Path}}",
+	"scripts": [
+	      "./linux/ubuntu/update.sh",
+	      "./linux/ubuntu/cloud-init.sh",
+	      "./linux/ubuntu/cleanup.sh"
+	]
+      }
+    ]
+  }

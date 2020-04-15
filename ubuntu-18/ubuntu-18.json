@@ -8,7 +8,7 @@
         "password":            "{{user `password`}}",
         "insecure_connection": "true",
   
-        "vm_name": "{{user 'vm_template_name'}}",
+        "vm_name": "vm_template_name",
         "datastore": "{{user `datastore`}}",
         "folder": "{{user `folder`}}",
         "host":     "{{user `host`}}",
@@ -60,6 +60,11 @@
     ],
   
     "provisioners": [
+      {
+       "type": "file",
+       "source": "./linux/ubuntu/sources.list",
+       "destination": "/tmp/sources.list"
+      },
       {
 	"type": "shell",
 	"execute_command": "echo 'vagrant' | sudo -S -E sh {{.Path}}",
