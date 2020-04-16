@@ -1,12 +1,12 @@
 {
-    "vcenter_server":"10.9.100.50",
-    "username":"administrator@evolvere.local",
-    "password":"Evolvere15gr8!",
-    "datastore":"evonas01",
+    "vcenter_server":"",
+    "username":"",
+    "password":"",
+    "datastore":"",
     "folder": "",
-    "host":"10.9.100.11",
-    "cluster": "evocluster01",
-    "network": "VM Network",
-    "ssh_username": "ubuntu",
-    "ssh_password": "ubuntu"
+    "host":"",
+    "cluster": "",
+    "network": "",
+    "ssh_username": "",
+    "ssh_password": ""
 }
